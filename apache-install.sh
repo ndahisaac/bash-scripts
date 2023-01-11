@@ -7,16 +7,6 @@ sudo yum -y install httpd
 sudo systemctl enable httpd
 sudo systemctl start httpd
 
-#navigate to the html folder that apache creates on install
-cd /var/www/html
-
-sudo mkdir Css
-sudo mkdir Scripts
-
-#create index.html file and change file permissions
-touch index.html
-sudo chmod 775 index.html
-
 sudo echo '<!DOCTYPE html>
 
 <html lang="en">
@@ -25,17 +15,6 @@ sudo echo '<!DOCTYPE html>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<title>A Basic HTML5 Template</title>
-		<meta name="description" content="A simple HTML5 Template for new projects." />
-		<meta name="author" content="SitePoint" />
-
-		<meta property="og:title" content="Welcome" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/" />
-		<meta property="og:description" content="A simple HTML5 Template for new projects." />
-		<meta property="og:image" content="image.png" />
-
-		<link rel="icon" href="/favicon.ico" />
-		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +33,6 @@ sudo echo '<!DOCTYPE html>
 				<p>Replace this with your own index.html file in /var/www/html.</p>
 			</div>
 		</div>
-		<!-- your content here... -->
 	</body>
 </html>
 
@@ -90,22 +68,16 @@ sudo echo '<!DOCTYPE html>
 		flex-shrink: 0;
 		width: 100%;
 		height: auto; /* 144px */
-		white-space: pre-wrap;
-		word-wrap: break-word;
-		word-break: break-word;
 		position: relative;
 		color: #ffffff;
 		line-height: 1.2;
 		font-size: 40px;
 	}
 	.container p {
-		white-space: pre-wrap;
-		word-wrap: break-word;
-		word-break: break-word;
 		position: relative;
 		color: #ffffff;
 		line-height: 1.2;
 		font-size: 18px;
 	}
 </style>
-' > index.html
+' > /var/www/html/index.html
